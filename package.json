@@ -4,7 +4,10 @@
   "description": "projv custom config",
   "main": "index.js",
   "scripts": {
-    "help": "index.js help"
+    "help": "node index.js -h"
+  },
+  "bin": {
+    "v2cust": "./index.js"
   },
   "repository": {
     "type": "git",
