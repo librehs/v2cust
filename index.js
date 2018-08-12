@@ -1,4 +1,4 @@
-#!/bin/env node
+#!/usr/bin/env node
 
 const program = require('commander');
 const package_json = require('./package.json');
@@ -8,7 +8,7 @@ configFile = {};
 
 program
   .version(package_json.version)
-  .usage('v2cust <base_config> <override_config>')
+  .usage('<base_config> <override_config>')
   .description('v2cust allow you to use different part of v2ray config file together. You can choose what to override.')
   .option('-l, --log', 'logs')
   .option('-i, --inbound', 'inbound')
