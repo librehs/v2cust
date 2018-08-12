@@ -2,6 +2,7 @@ const fs = require('fs');
 const color = require('cli-color');
 const tmp = require('tmp');
 const spawn = require('child_process').spawn;
+const beautify = require('js-beautify').js_beautify;
 
 function proc(program, configFile) {
   
@@ -71,13 +72,13 @@ function proc(program, configFile) {
     process.exit(1);
   }
 
+  var content = beautify(JSON.stringify(baseConfigJSON));
+
   if (program.show) {
     console.log(color.blue(color.bold("[Info] ") + "merged config:"));
-    console.log(baseConfigJSON);
+    console.log(content);
     process.exit();
   }
-
-  var content = JSON.stringify(baseConfigJSON);
 
   if (saveToFile) {
     saveConfig(saveToFile, content, program.overwrite);
