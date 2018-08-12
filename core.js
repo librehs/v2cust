@@ -13,6 +13,7 @@ function proc(program, configFile) {
 
   if (fs.existsSync(configFile.base) === false) {
     errorText("Base config not found!");
+    console.log("(v2cust -h for help.)");
     process.exit(1);
   }
   if (fs.existsSync(configFile.override) === false) {
