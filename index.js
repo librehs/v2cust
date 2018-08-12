@@ -19,14 +19,13 @@ program
   .option('-r, --routing','routing (including inbound detour & outbound detour)')
   .option('-p, --policy','policy')
   .option('-t, --transport','transport')
-  .option('-v, --v2ray <v2ray_path>','v2ray path')
+  .option('-v, --v2ray <v2ray path>','v2ray path')
   .option('--show','don\'t run v2ray, just show the merged config file.')
   .option('--save <file>', 'don\'t run v2ray, just save the new configuration to <file> [default: config.json]')
   .option('--overwrite','overwrite the file to save.')
-  .action( function (base_config, override_config, v2ray_path){
+  .action( function (base_config, override_config){
     configFile.base = base_config;
     configFile.override = override_config;
-    configFile.v2ray = v2ray_path;
   });
 
 program.on('--help', function(){
