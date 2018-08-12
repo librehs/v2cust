@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/librehs/v2cust#readme",
   "dependencies": {
-    "commander": "^2.17.1"
+    "cli-color": "^1.2.0",
+    "commander": "^2.17.1",
+    "tmp": "^0.0.33"
   }
 }
