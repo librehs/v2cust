@@ -1,0 +1,22 @@
+{
+  "name": "v2cust",
+  "version": "0.1.0",
+  "description": "projv custom config",
+  "main": "index.js",
+  "scripts": {
+    "help": "index.js help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/librehs/v2cust.git"
+  },
+  "keywords": [
+    "projv"
+  ],
+  "author": "Team LibreHouse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/librehs/v2cust/issues"
+  },
+  "homepage": "https://github.com/librehs/v2cust#readme"
+}
