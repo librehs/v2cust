@@ -1,7 +1,7 @@
 {
   "name": "v2cust",
-  "version": "1.2.0",
-  "description": "projv custom config",
+  "version": "1.2.1",
+  "description": "Custom config for Project V.",
   "main": "index.js",
   "scripts": {
     "help": "node index.js -h"
@@ -14,7 +14,8 @@
     "url": "git+https://github.com/librehs/v2cust.git"
   },
   "keywords": [
-    "projv"
+    "cli",
+    "projectv"
   ],
   "author": "Team LibreHouse",
   "license": "MIT",

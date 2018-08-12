@@ -1,5 +1,5 @@
 # v2cust
-Custom your Project V config. - `npm install -g v2cust`
+Customize your Project V config. - `npm install -g v2cust`
 
 [![](https://nodei.co/npm/v2cust.png?global=true)](https://nodei.co/npm/v2cust)
 
