@@ -1,6 +1,8 @@
 # v2cust
 Customize your Project V config. - `npm install -g v2cust`
 
+[![David deps](https://img.shields.io/david/librehs/v2cust.svg?style=flat)](https://david-dm.org/librehs/v2cust)
+
 [![](https://nodei.co/npm/v2cust.png?global=true)](https://nodei.co/npm/v2cust)
 
 For help: `v2cust -h`.
