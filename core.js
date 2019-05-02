@@ -50,13 +50,20 @@ function proc(program, configFile) {
     let mergeConfig = determine(program);
 //    console.log(mergeConfig);
     if (mergeConfig.log) baseConfigJSON.log = overrideConfigJSON.log;
-    if (mergeConfig.inbound) baseConfigJSON.inbound = overrideConfigJSON.inbound;
-    if (mergeConfig.outbound) baseConfigJSON.outbound = overrideConfigJSON.outbound;
+    if (mergeConfig.inbound) {
+      baseConfigJSON.inbound = overrideConfigJSON.inbound;
+      baseConfigJSON.inbounds = overrideConfigJSON.inbounds;
+    }
+    if (mergeConfig.outbound) {
+      baseConfigJSON.outbound = overrideConfigJSON.outbound;
+      baseConfigJSON.outbounds = overrideConfigJSON.outbounds;
+    }
     if (mergeConfig.api) baseConfigJSON.api = overrideConfigJSON.api;
     if (mergeConfig.dns) baseConfigJSON.dns = overrideConfigJSON.dns;
     if (mergeConfig.stats) baseConfigJSON.stats = overrideConfigJSON.stats;
     if (mergeConfig.policy) baseConfigJSON.policy = overrideConfigJSON.policy;
     if (mergeConfig.transport) baseConfigJSON.transport = overrideConfigJSON.transport;
+    if (mergeConfig.reverse) baseConfigJSON.reverse = overrideConfigJSON.reverse;
     if (mergeConfig.routing) {
       if (!overrideConfigJSON.routing) {
         baseConfigJSON.routing = baseConfigJSON.inboundDetour = baseConfigJSON.outboundDetour = undefined;
@@ -136,6 +143,7 @@ function determine(program) {
   dtm.routing = program.routing ? true : false;
   dtm.policy = program.policy ? true : false;
   dtm.transport = program.transport ? true : false;
+  dtm.reverse = program.reverse ? true : false;
   return dtm;
 }
 
